@@ -1,0 +1,6 @@
+version: '3'
+
+tasks:
+  gen-api:
+    cmds:
+      - docker run --rm -v ${PWD}:/app openapitools/openapi-generator-cli generate -i app/docs/openapi.yaml -g go-server -o /app/server/golang
